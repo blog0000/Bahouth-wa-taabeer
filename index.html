@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>بحوث وتعابير</title>
+  <meta name="description" content="مدوناتات هي لعبة تعليمية تعليمية مواضيع تعليمية مميزة لتعليم الطلاب على تطوير الكتابة والتعبير.">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #e8f5e9;
+      color: #2e7d32;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #43a047;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    main {
+      padding: 2rem 1rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    .search-box {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    input[type="text"] {
+      padding: 0.6rem 1rem;
+      font-size: 1rem;
+      border: 1px solid #81c784;
+      border-radius: 25px;
+      width: 80%;
+      max-width: 400px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 1rem;
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    li:hover {
+      transform: translateY(-2px);
+    }
+    a {
+      text-decoration: none;
+      color: #2e7d32;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #66bb6a;
+    }
+  </style>
+  <script>
+    function searchTopics() {
+      var input = document.getElementById('searchInput').value.toLowerCase();
+      var items = document.querySelectorAll('ul li');
+      items.forEach(function(item) {
+        var text = item.textContent.toLowerCase();
+        item.style.display = text.includes(input) ? 'block' : 'none';
+      });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>بحوث وتعابير</h1>
+  </header>
+  <main>
+    <div class="search-box">
+      <input type="text" id="searchInput" onkeyup="searchTopics()" placeholder="ابحث عن موضوع تعبير...">
+    </div>
+    <ul>
+      <!-- المواضيع هنا -->
+    </ul>
+  </main>
+  <footer>
+    © 2025 بحوث وتعابير 
+  </footer>
+</body>
+</html>
